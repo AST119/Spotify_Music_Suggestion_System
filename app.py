@@ -8,7 +8,7 @@ import random
 st.set_page_config(layout="centered", page_title="Spotify Recommendation")
 
 # --- Heading and Image ---
-st.title("Spotify Music Recommendation System")
+st.title("Spotify Music Suggestion System")
 
 try:
     st.image("image.jpg", caption="Discover new music clusters!")
