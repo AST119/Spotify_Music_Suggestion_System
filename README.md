@@ -1,10 +1,10 @@
-# Spotify Music Recommendation System
+# Spotify Music Suggestion System
 
-This project implements a music recommendation system that leverages machine learning to categorize songs based on their audio features and then recommends similar tracks from a curated dataset. The system is deployed as an interactive web application using Streamlit.
+This project implements a music Suggestion system that leverages machine learning to categorize songs based on their audio features and then recommends similar tracks from a curated dataset. The system is deployed as an interactive web application using Streamlit.
 
 ## ✨ Live Demo
 
-Experience the Spotify Music Recommendation System live on Render:
+Experience the Spotify Music Suggestion System live on Render:
 [https://spotifymusicrecommendationsystem.onrender.com/](https://spotifymusicrecommendationsystem.onrender.com/)
 
 ## WebApp Screenshot
@@ -14,7 +14,7 @@ Experience the Spotify Music Recommendation System live on Render:
 
 ## 🚀 How It Works
 
-The recommendation system follows a typical machine learning pipeline for unsupervised learning:
+The Suggestion system follows a typical machine learning pipeline for unsupervised learning:
 
 1.  **Data Preprocessing**:
     * **Frequency Encoding**: Categorical features (like `genre`, `key`, `mode`, `time_signature`) are converted into numerical representations based on their frequency of occurrence in the training data.
@@ -26,7 +26,7 @@ The recommendation system follows a typical machine learning pipeline for unsupe
 3.  **Clustering (K-Means)**:
     * The reduced-dimension data is then clustered using the K-Means algorithm. This groups songs with similar underlying characteristics into distinct clusters. The optimal number of clusters was determined using evaluation metrics like the Davies-Bouldin score.
 
-4.  **Recommendation Logic**:
+4.  **Suggestion Logic**:
     * When a user inputs a song's features into the Streamlit application, the system first predicts which cluster that song belongs to using the trained PCA and K-Means models.
     * It then fetches a random selection of songs from a `Recommendation.csv` dataset that belong to the *same predicted cluster*.
 
@@ -43,7 +43,7 @@ The recommendation system follows a typical machine learning pipeline for unsupe
 The project directory should be structured as follows:
 
 ```bash
-SpotifyMusicRecommendationSystem/
+SpotifyMusicSuggestionSystem/
 ├── app.py
 ├── image.jpg
 ├── Recommendation.csv
@@ -68,8 +68,8 @@ To set up and run this project on your local machine, follow these steps:
 ### 1. Clone the Repository
 
 ```
-git clone [https://github.com/AST119/SpotifyMusicRecommendationSystem.git](https://github.com/AST119/SpotifyMusicRecommendationSystem.git)
-cd SpotifyMusicRecommendationSystem
+git clone [https://github.com/AST119/Spotify_Music_Suggestion_System.git](https://github.com/AST119/Spotify_Music_Suggestion_System.git)
+cd SpotifyMusicSuggestionSystem
 ```
 ### 2. Create a Virtual Environment (Recommended)
 ```
@@ -108,9 +108,9 @@ The files you need in the models/ directory are:
 
 . time_signature_freq_map.pkl
 
-. The file you need in the project root (SpotifyMusicRecommendationSystem/) is:
+. The file you need in the project root (SpotifyMusicSuggestionSystem/) is:
 
-. Recommendation.csv (Your dataset for recommendations).
+. Recommendation.csv (Your dataset for Suggestions).
 
 ### 5. Run the Streamlit Application
 Once all files are in place, run the application from your terminal:
